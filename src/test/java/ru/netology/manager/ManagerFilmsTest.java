@@ -26,7 +26,7 @@ class ManagerFilmsTest {
         manager.add(film5);
         manager.add(film6);
         manager.findAll();
-        assertArrayEquals(new Film[]{film6,film5,film4, film3, film2, film1, film}, manager.findAll());
+        assertArrayEquals(new Film[]{film6, film5, film4, film3, film2, film1, film}, manager.findAll());
 
     }
 
@@ -60,6 +60,7 @@ class ManagerFilmsTest {
         manager.findLast(10);
         assertArrayEquals(new Film[]{second, first}, manager.findLast(10));
     }
+
     @Test
     void findAllNoFilms() {
 
