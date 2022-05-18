@@ -46,8 +46,8 @@ class ManagerFilmsTest {
         manager1.add(film4);
         manager1.add(film5);
         manager1.add(film6);
-        manager1.findLast(5);
-        assertArrayEquals(new Film[]{film6, film5, film4, film3, film2}, manager1.findLast(5));
+        manager1.findLast();
+        assertArrayEquals(new Film[]{film6, film5, film4, film3, film2}, manager1.findLast());
 
     }
 
@@ -57,8 +57,8 @@ class ManagerFilmsTest {
         Film second = new Film(2, "Вперед");
         manager.add(first);
         manager.add(second);
-        manager.findLast(10);
-        assertArrayEquals(new Film[]{second, first}, manager.findLast(10));
+        manager.findLast();
+        assertArrayEquals(new Film[]{second, first}, manager.findLast());
     }
 
     @Test

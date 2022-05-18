@@ -11,12 +11,11 @@ import ru.netology.domain.Film;
 public class ManagerFilms {
 
     private Film[] films = new Film[0];
-    int limit = 10;
+    private int limit = 10;
 
     public ManagerFilms(int limit) {
         this.limit = limit;
     }
-
 
     public void add(Film film) {
         int length = films.length + 1;
@@ -37,12 +36,12 @@ public class ManagerFilms {
         return result;
     }
 
-    public Film[] findLast(int limit) {
-        if (films.length <= limit) {
-            limit = films.length;
+    public Film[] findLast() {
+        if (films.length <= this.limit) {
+            this.limit = films.length;
         }
-        Film[] tmp = new Film[limit];
-        for (int i = 0; i < limit; i++) {
+        Film[] tmp = new Film[this.limit];
+        for (int i = 0; i < this.limit; i++) {
             int index = films.length - i - 1;
             tmp[i] = films[index];
         }
