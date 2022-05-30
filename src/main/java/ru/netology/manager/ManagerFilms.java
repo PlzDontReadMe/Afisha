@@ -37,12 +37,13 @@ public class ManagerFilms {
     }
 
     public Film[] findLast() {
-        if (films.length <= this.limit) {
-            this.limit = films.length;
+        int result = 0;
+        if (films.length <= limit) {
+            result = films.length;
         }
-        Film[] tmp = new Film[this.limit];
-        for (int i = 0; i < this.limit; i++) {
-            int index = films.length - i - 1;
+        Film[] tmp = new Film[result];
+        for (int i = 0; i < result; i++) {
+            int index = result - i - 1;
             tmp[i] = films[index];
         }
         return tmp;
